@@ -18,10 +18,10 @@ libraryDependencies ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.specs2" %% "specs2-core" % specs2Version % "test",
-  "org.specs2" %% "specs2-cats" % specs2Version % "test",
-  "org.specs2" %% "specs2-mock" % specs2Version % "test"
-)
+  "org.specs2" %% "specs2-core",
+  "org.specs2" %% "specs2-cats"
+).map(_% specs2Version % "test")
+
 
 libraryDependencies ++= Seq(
   "io.circe" %% "circe-core",
